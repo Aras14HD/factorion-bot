@@ -688,7 +688,7 @@ impl RedditClient {
             };
             if let Some((mention, commands, mention_author)) = mention_map.get(comment_id) {
                 comment.id = mention.clone();
-                comment.commands = *commands;
+                comment.commands = comment.commands | *commands;
                 comment.notify = Some(author.to_string());
                 comment.author = mention_author.clone();
             }

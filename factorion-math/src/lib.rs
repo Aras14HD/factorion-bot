@@ -336,8 +336,9 @@ pub fn approximate_termial_digits_float(k: u32, n: Float) -> Integer {
 /// Adjusts the output of [`approximate_factorial`], by combining the 10 exponents of the number and the extra exponent.
 ///
 /// # Panic
-/// Will panic if `x` is not finite.
+/// Will panic if `x` is not finite or `x` is non-positive.
 pub fn adjust_approximate((x, e): (Float, Integer)) -> (Float, Integer) {
+    assert!(x > 0.0, "Got non-positive number, x was {x}");
     let prec = x.prec();
     let (extra, _) = (x.clone().ln() / Float::with_val(prec, 10).ln())
         .to_integer_round(rug::float::Round::Down)

@@ -339,7 +339,10 @@ pub fn approximate_termial_digits_float(k: u32, n: Float) -> Integer {
 /// Will panic if `x` is not finite.
 pub fn adjust_approximate((x, e): (Float, Integer)) -> (Float, Integer) {
     let prec = x.prec();
-    let (extra, _) = (x.clone().ln() / Float::with_val(prec, 10).ln())
+    if x == 0.0 {
+        return (Float::with_val(prec, 0), Integer::ZERO.clone());
+    }
+    let (extra, _) = (x.clone().abs().ln() / Float::with_val(prec, 10).ln())
         .to_integer_round(rug::float::Round::Down)
         .unwrap_or_else(|| panic!("Got non-finite number, x was {x}"));
     let x = x / (Float::with_val(prec, 10).pow(extra.clone()));

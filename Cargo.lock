@@ -447,7 +447,7 @@ dependencies = [
 
 [[package]]
 name = "factorion-math"
-version = "1.0.4"
+version = "1.0.5"
 dependencies = [
  "gmp-mpfr-sys",
  "rug",

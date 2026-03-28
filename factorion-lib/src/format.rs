@@ -138,7 +138,7 @@ const EN_SINGLES: [&str; 10] = [
     "", "one ", "two ", "three ", "four ", "five ", "six ", "seven ", "eight ", "nine ",
 ];
 const EN_TENS: [&str; 10] = [
-    "", "ten ", "twenty ", "thirty ", "forty ", "fivety ", "sixty ", "seventy ", "eighty ",
+    "", "ten ", "twenty ", "thirty ", "forty ", "fifty ", "sixty ", "seventy ", "eighty ",
     "ninety ",
 ];
 const EN_TENS_SINGLES: [&str; 10] = [
@@ -147,7 +147,7 @@ const EN_TENS_SINGLES: [&str; 10] = [
     "twelve ",
     "thirteen ",
     "fourteen ",
-    "fiveteen ",
+    "fifteen ",
     "sixteen ",
     "seventeen ",
     "eighteen ",
@@ -513,13 +513,13 @@ mod tests {
         .unwrap();
         assert_eq!(
             acc,
-            "one tredeccentillion two hundred thirty four duodeccentillion five hundred sixty seven undeccentillion eight hundred ninety deccentillion one hundred twenty three novemcentillion four hundred fivety six octocentillion"
+            "one tredeccentillion two hundred thirty four duodeccentillion five hundred sixty seven undeccentillion eight hundred ninety deccentillion one hundred twenty three novemcentillion four hundred fifty six octocentillion"
         );
         let mut acc = String::new();
         write_out_number(&mut acc, &"123456789".parse().unwrap(), &consts).unwrap();
         assert_eq!(
             acc,
-            "one hundred twenty three million four hundred fivety six thousand seven hundred eighty nine"
+            "one hundred twenty three million four hundred fifty six thousand seven hundred eighty nine"
         );
     }
 

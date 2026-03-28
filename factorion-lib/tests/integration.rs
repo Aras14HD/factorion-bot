@@ -1825,7 +1825,7 @@ fn test_write_out_factorial_digits() {
     let reply = comment.get_reply(&consts);
     assert_eq!(
         reply,
-        "Factorial of sixty seven novemnonagintillion eight hundred thirty nine octononagintillion one hundred twenty seven septennonagintillion eight hundred thirty seven sexnonagintillion four hundred forty two quinnonagintillion eight hundred seventy three quattuornonagintillion has approximately twenty centillion four hundred forty six novemnonagintillion five hundred twenty two octononagintillion two hundred fiveteen septennonagintillion five hundred sixty four sexnonagintillion two hundred thirty six quinnonagintillion digits \n\n\n*^(This action was performed by a bot | [Source code](http://f.r0.fyi))*"
+        "Factorial of sixty seven novemnonagintillion eight hundred thirty nine octononagintillion one hundred twenty seven septennonagintillion eight hundred thirty seven sexnonagintillion four hundred forty two quinnonagintillion eight hundred seventy three quattuornonagintillion has approximately twenty centillion four hundred forty six novemnonagintillion five hundred twenty two octononagintillion two hundred fifteen septennonagintillion five hundred sixty four sexnonagintillion two hundred thirty six quinnonagintillion digits \n\n\n*^(This action was performed by a bot | [Source code](http://f.r0.fyi))*"
     );
 }
 
